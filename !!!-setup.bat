@@ -14,7 +14,7 @@ rmdir /Q /S ffmpeg-build
 
 echo [Info] (3/3) yt-dlp.exeをダウンロードします
 timeout 3
-bitsadmin /transfer "yt-dlp" https://github.com/yt-dlp/yt-dlp/releases/download/2022.11.11/yt-dlp.exe %~dp0/yt-dlp.exe
+bitsadmin /transfer "yt-dlp" https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp.exe %~dp0/yt-dlp.exe
 
 
 echo [Info] セットアップ完了
