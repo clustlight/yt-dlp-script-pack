@@ -6,6 +6,10 @@ set /p MODE="動作モード (1: フル, 2: 動画のみ, 3: メタデータの�
 
 set /p URL="URL: "
 
+IF "%MODE%"=="" (
+    set MODE=1
+)
+
 IF /i {%MODE%}=={1} (goto :no1)
 IF /i {%MODE%}=={2} (goto :no2)
 IF /i {%MODE%}=={3} (goto :no3)
