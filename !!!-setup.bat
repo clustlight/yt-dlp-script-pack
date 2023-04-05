@@ -1,6 +1,18 @@
 @echo off
 chcp 65001 > nul
 
+IF EXIST .\yt-dlp.exe (
+    ECHO [Warning] 既にリソースがダウンロードされている可能性があります。セットアップを続行しますか？ [y/n]
+
+    :LOOP
+    CHOICE /C YN /N
+    IF ERRORLEVEL 2 (
+        echo [Info] セットアップをキャンセルしました。
+        pause
+        exit
+    )
+)
+
 echo [Info] (1/3) ffmpegをダウンロードします
 timeout 3
 bitsadmin /transfer "ffmpeg" /priority FOREGROUND https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl-shared.zip %~dp0/ffmpeg-build.zip
