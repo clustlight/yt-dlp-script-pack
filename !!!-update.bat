@@ -1,3 +1,3 @@
 @echo off
 
-yt-dlp --update
+.\bin\yt-dlp.exe --update
