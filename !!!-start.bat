@@ -1,5 +1,5 @@
 @echo off
-title Full Archive Script Ver1.1.0
+title Full Archive Script Ver1.1.1
 chcp 65001 > nul
 
 set /p MODE="動作モード (1: フル, 2: 動画のみ, 3: メタデータのみ, 4: チャットのみ):  "
